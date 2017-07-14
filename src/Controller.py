@@ -1,119 +1,119 @@
-# 
 from abc import ABCMeta, abstractmethod
 
-# class Controller (metaclass=ABCMeta):
-class Controller ():
-    #public:
+
+# class Controller ():
+class Controller(metaclass=ABCMeta):
+    # public:
     @abstractmethod
-    def __init__( self, process, database):
-        self.process = process
+    def __init__(self, database):
         self.database = database
-        self.itemList = [] # Array
-        self.indexIdx = 0 # int
-        #self.initiateAllFromDB()
+        self.itemList = []  # Array
+        self.indexIdx = 0  # int
+        # self.initiateAllFromDB()
 
     @abstractmethod
-    def createItem( self, **kwargs ):
+    def createItem(self, **kwargs):
         """
          @**kwargs: all parameter used to create an item
         """
         raise NotImplementedError
 
     @abstractmethod
-    def delItem( self, id_item ): 
+    def delItem(self, id_item): 
         """
          @id_item:int
         """
         raise NotImplementedError
 
     @abstractmethod
-    def initiateFromDB( self, id_item,  validation ): 
+    def initiateFromDB(self, id_item,  validation): 
         """
          @id_item:int
         """
         raise NotImplementedError
 
     @abstractmethod
-    def initiateAllFromDB( self, validation ): 
+    def initiateAllFromDB(self, validation): 
         """
         """
         raise NotImplementedError
 
-    def setDatabase( self, database ):
-        self.database=database
+    def setDatabase(self, database):
+        self.database = database
         return True
 
-    def addItem( self, item ): 
+    def addItem(self, item): 
         """
          @item:
         """
-        duplicate=self.isItem(item.getId())
+        duplicate = self.isItem(item.getId())
         if not duplicate:
             self.itemList.append(item)
-            self.indexIdx+=1
+            self.indexIdx += 1
             return True
         else:
-            print("Item is a duplicate! (%s: id=%s)"%(type(item).__name__,item.getId()))
+            msg = "Item is a duplicate! (%s: id = %s)"
+            print(msg % (type(item).__name__, item.getId()))
             return False
 
-    def removeItem( self, id_item ): 
+    def removeItem(self, id_item): 
         """
          @id_item:int
         """
         for i in self.itemList:
             if i.getId() == id_item:
-                item=i
+                item = i
         if item:
             self.itemList.remove(item)
-            self.indexIdx-=1
+            self.indexIdx -= 1
             return True
         else:
             return False
 
-    #private:
-    def getItemById( self, id): 
+    # private:
+    def getItemById(self, id): 
         """
          @id:int
          @item
         """
-        validation=False
+        validation = False
         """
          isUpToDate gibt True zurück,
          wenn id ist nicht in usr
          gibt False zurück,
          wenn id ist in usr
         """
-        upToDate=self.process.isUpToDate(self.table_name,id)
-        removed=not self.process.isUpToDate(self.table_name,-id)
+        upToDate = self.process.isUpToDate(self.table_name, id)
+        removed = not self.process.isUpToDate(self.table_name, -id)
         if not upToDate:
             self.initiateFromDB(id)
-            self.process.setUpToDate(self.table_name,id)
+            self.process.setUpToDate(self.table_name, id)
         elif removed:
             self.removeItem(id)
-            self.process.setUpToDate(self.table_name,-id)
+            self.process.setUpToDate(self.table_name, -id)
             return False
         for item in self.itemList:
             if item.getId() == id:
-                validation=item
+                validation = item
         if not validation:
             if self.initiateFromDB(id):
                 for item in self.itemList:
                     if item.getId() == id:
-                        validation=item
+                        validation = item
         return validation
 
     def isItem(self, id):
-        validation=False
+        validation = False
         for item in self.itemList:
             if item.getId() == id:
-                validation=True
+                validation = True
         return validation
 
-    def getAllItems( self ):
+    def getAllItems(self):
         """
          @itemList:Array
         """
-        updates=self.process.getUpdates(self.table_name)
+        updates = self.process.getUpdates(self.table_name)
         for update in updates:
             if int(update) < 0:
                 self.getItemById(-update)
@@ -121,19 +121,19 @@ class Controller ():
                 self.getItemById(update)
         return self.itemList
 
-    #public:
-    def getId( self, idx_permission):
+    # public:
+    def getId(self, idx_permission):
         """
          @idx_permission:int
          @id:int
         """
         if self.indexIdx > idx_permission and idx_permission >= 0:
-            id=self.itemList[idx_permission].getId()
+            id = self.itemList[idx_permission].getId()
             return id
         else:
             return False
 
-    def getTableName( self ):
+    def getTableName(self):
         """
          @table_name:str
         """
