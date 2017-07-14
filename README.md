@@ -7,3 +7,4 @@ We are a group of hobby developers and now we want to create a new Telegram Bot 
 
 ## Contribution
 We are happy about everyone that joins the team and has fun on programming. We have a [Telegram-Group](https://t.me/TheVillageDev), where we discuss new features.
+
