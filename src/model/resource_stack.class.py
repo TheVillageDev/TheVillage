@@ -40,22 +40,22 @@ class ResourceStack ():
         return self.amount_resource
 
     def setAmountResource(self, amount_resource):
-        self.amount_resource = amount_resource
+        self.amount_resource = int(amount_resource)
 
     def getIdResource(self):
         return self.id_resource
 
     def setIdResource(self, id_resource):
-        self.id_resource = id_resource
+        self.id_resource = int(id_resource)
 
     def getIdUser(self):
         return self.id_user
 
     def setIdUser(self, id_user):
-        self.id_user = id_user
+        self.id_user = int(id_user)
 
     def getIdRechnung(self):
         return self.id_rechnung
 
     def setIdRechnung(self, id_rechnung):
-        self.id_rechnung = id_rechnung
+        self.id_rechnung = int(id_rechnung)

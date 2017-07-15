@@ -44,28 +44,28 @@ class Building ():
         return self.arbeiter
 
     def setArbeiter(self, arbeiter):
-        self.arbeiter = arbeiter
+        self.arbeiter = int(arbeiter)
 
     def getEndeArbeit(self):
         return self.ende_arbeit
 
     def setEndeArbeit(self, ende_arbeit):
-        self.ende_arbeit = ende_arbeit
+        self.ende_arbeit = ende_arbeit  # TODO check type
 
     def getLevel(self):
         return self.level
 
     def setLevel(self, level):
-        self.level = level
+        self.level = float(level)
 
     def getIdUser(self):
         return self.id_user
 
     def setIdUser(self, id_user):
-        self.id_user = id_user
+        self.id_user = int(id_user)
 
     def getIdBuildingType(self):
         return self.id_building_type
 
     def setIdBuildingType(self, id_building_type):
-        self.id_building_type = id_building_type
+        self.id_building_type = int(id_building_type)

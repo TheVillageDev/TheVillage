@@ -24,4 +24,4 @@ class BuildingType ():
         return self.id_zeitalter
 
     def setIdZeitalter(self, id_zeitalter):
-        self.id_zeitalter = id_zeitalter
+        self.id_zeitalter = int(id_zeitalter)

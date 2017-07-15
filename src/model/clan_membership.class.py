@@ -32,10 +32,10 @@ class ClanMembership ():
         return self.id_clan_authority_lvl
 
     def setIdClanAuthorityLvl(self, id_clan_authority_lvl):
-        self.id_clan_authority_lvl = id_clan_authority_lvl
+        self.id_clan_authority_lvl = int(id_clan_authority_lvl)
 
     def getIdClan(self):
         return self.id_clan
 
     def setIdClan(self, id_clan):
-        self.id_clan = id_clan
+        self.id_clan = int(id_clan)

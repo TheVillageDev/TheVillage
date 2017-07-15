@@ -22,7 +22,7 @@ class HierarchyLvl ():
         else:
             raise ValueError(missing+"id")
         if "name" in kwargs.keys():
-            self.id = str(kwargs["name"])
+            self.name = str(kwargs["name"])
         else:
             raise ValueError(missing+"name")
         if "description" in kwargs.keys():
@@ -40,13 +40,13 @@ class HierarchyLvl ():
         return self.name
 
     def setName(self, name):
-        self.name = name
+        self.name = str(name)
 
     def getDescription(self):
         return self.description
 
     def setDescription(self, description):
-        self.description = description
+        self.description = str(description)
 
     """
     hierarchy lvl stuff

@@ -24,4 +24,4 @@ class Zeitalter ():
         return self.min_fortschritts_lvl
 
     def setMinFortschrittsLvl(self, min_fortschritts_lvl):
-        self.min_fortschritts_lvl = min_fortschritts_lvl
+        self.min_fortschritts_lvl = float(min_fortschritts_lvl)

@@ -20,7 +20,7 @@ class Role(metaclass=ABCMeta):
         return self.id_permission
 
     def setIdPermission(self, id_permission):
-        self.id_permission = id_permission
+        self.id_permission = int(id_permission)
 
     def getIdHierarchyLvlAvailability_bis(self):
         return self.id_hierarchy_lvl_availability_bis
@@ -28,5 +28,5 @@ class Role(metaclass=ABCMeta):
     def setIdHierarchyLvlAvailability_bis(
             self, id_hierarchy_lvl_availability_bis):
         self.id_hierarchy_lvl_availability_bis =\
-                id_hierarchy_lvl_availability_bis
+                int(id_hierarchy_lvl_availability_bis)
 

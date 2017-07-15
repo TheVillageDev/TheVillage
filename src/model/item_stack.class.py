@@ -38,16 +38,16 @@ class ItemStack ():
         return self.amount_item
 
     def setAmountItem(self, amount_item):
-        self.amount_item = amount_item
+        self.amount_item = int(amount_item)
 
     def getIdUser(self):
         return self.id_user
 
     def setIdUser(self, id_user):
-        self.id_user = id_user
+        self.id_user = int(id_user)
 
     def getIdItemType(self):
         return self.id_item_type
 
     def setIdItemType(self, id_item_type):
-        self.id_item_type = id_item_type
+        self.id_item_type = int(id_item_type)

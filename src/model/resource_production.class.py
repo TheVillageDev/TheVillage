@@ -32,10 +32,10 @@ class ResourceProduction ():
         return self.id_resource
 
     def setIdResource(self, id_resource):
-        self.id_resource = id_resource
+        self.id_resource = int(id_resource)
 
     def getIdBuildingType(self):
         return self.id_building_type
 
     def setIdBuildingType(self, id_building_type):
-        self.id_building_type = id_building_type
+        self.id_building_type = int(id_building_type)

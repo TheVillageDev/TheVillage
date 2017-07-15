@@ -44,28 +44,28 @@ class BuildingTypeName ():
         return self.name
 
     def setName(self, name):
-        self.name = name
+        self.name = str(name)
 
     def getDescription(self):
         return self.description
 
     def setDescription(self, description):
-        self.description = description
+        self.description = str(description)
 
     def getMaxArbeiter(self):
         return self.max_arbeiter
 
     def setMaxArbeiter(self, max_arbeiter):
-        self.max_arbeiter = max_arbeiter
+        self.max_arbeiter = int(max_arbeiter)
 
     def getIdBuildingType(self):
         return self.id_building_type
 
     def setIdBuildingType(self, id_building_type):
-        self.id_building_type = id_building_type
+        self.id_building_type = int(id_building_type)
 
     def getIdZeitalter(self):
         return self.id_zeitalter
 
     def setIdZeitalter(self, id_zeitalter):
-        self.id_zeitalter = id_zeitalter
+        self.id_zeitalter = int(id_zeitalter)

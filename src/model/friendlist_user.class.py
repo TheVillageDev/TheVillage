@@ -32,10 +32,10 @@ class FriendlistUser ():
         return self.id_user
 
     def setIdUser(self, id_user):
-        self.id_user = id_user
+        self.id_user = int(id_user)
 
     def getIdFriendlist(self):
         return self.id_friendlist
 
     def setIdFriendlist(self, id_friendlist):
-        self.id_friendlist = id_friendlist
+        self.id_friendlist = int(id_friendlist)

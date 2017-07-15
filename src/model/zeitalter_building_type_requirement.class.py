@@ -37,16 +37,16 @@ class ZeitalterBuildingTypeRequirement ():
         return self.min_level
 
     def setMinLevel(self, min_level):
-        self.min_level = min_level
+        self.min_level = float(min_level)
 
     def getIdBuildingType(self):
         return self.id_building_type
 
     def setIdBuildingType(self, id_building_type):
-        self.id_building_type = id_building_type
+        self.id_building_type = int(id_building_type)
 
     def getIdZeitalter(self):
         return self.id_zeitalter
 
     def setIdZeitalter(self, id_zeitalter):
-        self.id_zeitalter = id_zeitalter
+        self.id_zeitalter = int(id_zeitalter)

@@ -52,34 +52,34 @@ class Kampf ():
         return self.angreifer_truppen
 
     def setAngreiferTruppen(self, angreifer_truppen):
-        self.angreifer_truppen = angreifer_truppen
+        self.angreifer_truppen = int(angreifer_truppen)
 
     def getVerteidigerTruppen(self):
         return self.verteidiger_truppen
 
     def setVerteidigerTruppen(self, verteidiger_truppen):
-        self.verteidiger_truppen = verteidiger_truppen
+        self.verteidiger_truppen = int(verteidiger_truppen)
 
     def getGewonnen(self):
         return self.gewonnen
 
     def setGewonnen(self, gewonnen):
-        self.gewonnen = gewonnen
+        self.gewonnen = bool(gewonnen)
 
     def getTimestamp(self):
         return self.timestamp
 
     def setTimestamp(self, timestamp):
-        self.timestamp = timestamp
+        self.timestamp = timestamp  # TODO check type
 
     def getIdUserAngreifer(self):
         return self.id_user_angreifer
 
     def setIdUserAngreifer(self, id_user_angreifer):
-        self.id_user_angreifer = id_user_angreifer
+        self.id_user_angreifer = int(id_user_angreifer)
 
     def getIdUserVerteidiger(self):
         return self.id_user_verteidiger
 
     def setIdUserVerteidiger(self, id_user_verteidiger):
-        self.id_user_verteidiger = id_user_verteidiger
+        self.id_user_verteidiger = int(id_user_verteidiger)

@@ -32,10 +32,10 @@ class BuildingTypeRechnung ():
         return self.id_rechnung
 
     def setIdRechnung(self, id_rechnung):
-        self.id_rechnung = id_rechnung
+        self.id_rechnung = int(id_rechnung)
 
     def getIdBuildingType(self):
         return self.id_building_type
 
     def setIdBuildingType(self, id_building_type):
-        self.id_building_type = id_building_type
+        self.id_building_type = int(id_building_type)

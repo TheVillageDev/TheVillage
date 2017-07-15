@@ -40,7 +40,7 @@ class ClanRole ():
     def setIdClanAuthorityLvlAvailabilityVon(
             self, id_clan_authority_lvl_availability_von):
         self.id_clan_authority_lvl_availability_von =\
-                id_clan_authority_lvl_availability_von
+                int(id_clan_authority_lvl_availability_von)
 
     def getIdClanAuthorityLvlAvailabilityBis(self):
         return self.id_clan_authority_lvl_availability_bis
@@ -48,10 +48,10 @@ class ClanRole ():
     def setIdClanAuthorityLvlAvailabilityBis(
             self, id_clan_authority_lvl_availability_bis):
         self.id_clan_authority_lvl_availability_bis =\
-                id_clan_authority_lvl_availability_bis
+                int(id_clan_authority_lvl_availability_bis)
 
     def getIdClanPermission(self):
         return self.id_clan_permission
 
     def setIdClanPermission(self, id_clan_permission):
-        self.id_clan_permission = id_clan_permission
+        self.id_clan_permission = int(id_clan_permission)

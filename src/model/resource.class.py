@@ -36,16 +36,16 @@ class Resource ():
         return self.name
 
     def setName(self, name):
-        self.name = name
+        self.name = str(name)
 
     def getIdZeitalterAvailabilityVon(self):
         return self.id_zeitalter_availability_von
 
     def setIdZeitalterAvailabilityVon(self, id_zeitalter_availability_von):
-        self.id_zeitalter_availability_von = id_zeitalter_availability_von
+        self.id_zeitalter_availability_von = int(id_zeitalter_availability_von)
 
     def getIdZeitalterAvailabilityBis(self):
         return self.id_zeitalter_availability_bis
 
     def setIdZeitalterAvailabilityBis(self, id_zeitalter_availability_bis):
-        self.id_zeitalter_availability_bis = id_zeitalter_availability_bis
+        self.id_zeitalter_availability_bis = int(id_zeitalter_availability_bis)

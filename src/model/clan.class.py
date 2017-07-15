@@ -30,10 +30,10 @@ class Clan ():
         return self.name
 
     def setName(self, name):
-        self.name = name
+        self.name = str(name)
 
     def getDescription(self):
         return self.description
 
     def setDescription(self, description):
-        self.description = description
+        self.description = str(description)

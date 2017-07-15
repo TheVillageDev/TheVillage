@@ -37,5 +37,5 @@ class UserRole (Role):
         return self.id_user
 
     def setIdUser(self, id_user):
-        self.id_user = id_user
+        self.id_user = int(id_user)
 

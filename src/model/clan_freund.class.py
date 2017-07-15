@@ -32,10 +32,10 @@ class ClanFreund ():
         return self.id_clan_1
 
     def setIdClan1(self, id_clan_1):
-        self.id_clan_1 = id_clan_1
+        self.id_clan_1 = int(id_clan_1)
 
     def getIdClan2(self):
         return self.id_clan_2
 
     def setIdClan2(self, id_clan_2):
-        self.id_clan_2 = id_clan_2
+        self.id_clan_2 = int(id_clan_2)

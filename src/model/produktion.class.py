@@ -32,10 +32,10 @@ class Produktion ():
         return self.id_item_type
 
     def setIdItemType(self, id_item_type):
-        self.id_item_type = id_item_type
+        self.id_item_type = int(id_item_type)
 
     def getIdBuildingType(self):
         return self.id_building_type
 
     def setIdBuildingType(self, id_building_type):
-        self.id_building_type = id_building_type
+        self.id_building_type = int(id_building_type)

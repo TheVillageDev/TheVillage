@@ -36,16 +36,16 @@ class Friendlist ():
         return self.name
 
     def setName(self, name):
-        self.name = name
+        self.name = str(name)
 
     def getDescription(self):
         return self.description
 
     def setDescription(self, description):
-        self.description = description
+        self.description = str(description)
 
     def getIdUser(self):
         return self.id_user
 
     def setIdUser(self, id_user):
-        self.id_user = id_user
+        self.id_user = int(id_user)

@@ -83,55 +83,55 @@ class User ():
         return self.fortschritts_lvl
 
     def setFortschrittsLvl(self, fortschritts_lvl):
-        self.fortschritts_lvl = fortschritts_lvl
+        self.fortschritts_lvl = float(fortschritts_lvl)
 
     def getInviteLink(self):
         return self.invite_link
 
     def setInviteLink(self, invite_link):
-        self.invite_link = invite_link
+        self.invite_link = str(invite_link)
 
     def getAtkLink(self):
         return self.atk_link
 
     def setAtkLink(self, atk_link):
-        self.atk_link = atk_link
+        self.atk_link = str(atk_link)
 
     def getArbeiterGesamt(self):
         return self.arbeiter_gesamt
 
     def setArbeiterGesamt(self, arbeiter_gesamt):
-        self.arbeiter_gesamt = arbeiter_gesamt
+        self.arbeiter_gesamt = int(arbeiter_gesamt)
 
     def getTruppenGesamt(self):
         return self.truppen_gesamt
 
     def setTruppenGesamt(self, truppen_gesamt):
-        self.truppen_gesamt = truppen_gesamt
+        self.truppen_gesamt = int(truppen_gesamt)
 
     def getLastMessageTimestamp(self):
         return self.last_message_timestamp
 
     def setLastMessageTimestamp(self, last_message_timestamp):
-        self.last_message_timestamp = last_message_timestamp
+        self.last_message_timestamp = last_message_timestamp  # TODO check type
 
     def getInactive(self):
         return self.inactive
 
     def setInactive(self, inactive):
-        self.inactive = inactive
+        self.inactive = bool(inactive)
 
     def getIdClanMembership(self):
         return self.id_clan_membership
 
     def setIdClanMembership(self, id_clan_membership):
-        self.id_clan_membership = id_clan_membership
+        self.id_clan_membership = int(id_clan_membership)
 
     def getIdHierarchyLvl(self):
         return self.id_hierarchy_lvl
 
     def setIdHierarchyLvl(self, id_hierarchy_lvl):
-        self.id_hierarchy_lvl = id_hierarchy_lvl
+        self.id_hierarchy_lvl = int(id_hierarchy_lvl)
 
     """
     hierarchy lvl and permission stuff

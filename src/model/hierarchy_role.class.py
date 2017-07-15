@@ -40,5 +40,5 @@ class HierarchyRole (Role):
     def setIdHierarchyLvlAvailability_von(
             self, id_hierarchy_lvl_availability_von):
         self.id_hierarchy_lvl_availability_von =\
-                id_hierarchy_lvl_availability_von
+                int(id_hierarchy_lvl_availability_von)
 
