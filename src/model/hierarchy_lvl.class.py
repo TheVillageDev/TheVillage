@@ -1,19 +1,18 @@
 # 
 class HierarchyLvl ():
     """
-     @Author: Marco
+    id # int
+    name # string
+    description # string
+    ids_hierarchy_role # array
     """
-    # private:
-    id = None  # int
-    description = ""  # string
-    ids_hierarchy_role = []  # array
-    ids_user = []  # array
     # public:
 
     def __init__(self, **kwargs):
         """
            @**kwargs:
           id: int
+          name: string
           description: string
           ids_hierarchy_role: Array
         """
@@ -22,6 +21,10 @@ class HierarchyLvl ():
             self.id = int(kwargs["id"])
         else:
             raise ValueError(missing+"id")
+        if "name" in kwargs.keys():
+            self.id = str(kwargs["name"])
+        else:
+            raise ValueError(missing+"name")
         if "description" in kwargs.keys():
             self.description = str(kwargs["description"])
         if "ids_hierarchy_role" in kwargs.keys():
@@ -33,12 +36,21 @@ class HierarchyLvl ():
         """
         return self.id
 
-    def getDescription(self): 
-        """
-         @description:string
-        """
+    def getName(self):
+        return self.name
+
+    def setName(self, name):
+        self.name = name
+
+    def getDescription(self):
         return self.description
 
+    def setDescription(self, description):
+        self.description = description
+
+    """
+    hierarchy lvl stuff
+    """
     def getHierarchyRoles(self): 
         """
          @ids_hierarchy_role:array

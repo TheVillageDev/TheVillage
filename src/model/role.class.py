@@ -7,7 +7,7 @@ class Role(metaclass=ABCMeta):
     """
     id # int
     id_permission # int
-    id_max_hierarchy_lvl # int
+    id_hierarchy_lvl_availability_bis # int
     """
     # public:
     def getId(self): 
@@ -16,18 +16,17 @@ class Role(metaclass=ABCMeta):
         """
         return self.id
 
-    def getPermission(self): 
-        """
-         @id_permission:int
-        """
+    def getIdPermission(self):
         return self.id_permission
 
-    def getMaxHierarchyLvl(self): 
-        """
-         @id_max_hierarchy_lvl:int
-        """
-        try:
-            return self.id_max_hierarchy_lvl
-        except:
-            return False
+    def setIdPermission(self, id_permission):
+        self.id_permission = id_permission
+
+    def getIdHierarchyLvlAvailability_bis(self):
+        return self.id_hierarchy_lvl_availability_bis
+
+    def setIdHierarchyLvlAvailability_bis(
+            self, id_hierarchy_lvl_availability_bis):
+        self.id_hierarchy_lvl_availability_bis =\
+                id_hierarchy_lvl_availability_bis
 

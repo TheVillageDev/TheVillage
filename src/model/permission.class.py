@@ -33,4 +33,6 @@ class Permission ():
         """
         return self.description
 
+    def setDescription(self, description):
+        self.description = description
 

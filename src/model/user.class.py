@@ -44,19 +44,20 @@ class User ():
         else:
             raise ValueError(missing+"username")
         if "fortschritts_lvl" in kwargs.keys():
-            self.fortschritts_lvl = int(kwargs["fortschritts_lvl"])
+            self.fortschritts_lvl = float(kwargs["fortschritts_lvl"])
         if "invite_link" in kwargs.keys():
-            self.invite_link = int(kwargs["invite_link"])
+            self.invite_link = str(kwargs["invite_link"])
         if "atk_link" in kwargs.keys():
-            self.atk_link = int(kwargs["atk_link"])
+            self.atk_link = str(kwargs["atk_link"])
         if "arbeiter_gesamt" in kwargs.keys():
             self.arbeiter_gesamt = int(kwargs["arbeiter_gesamt"])
         if "truppen_gesamt" in kwargs.keys():
             self.truppen_gesamt = int(kwargs["truppen_gesamt"])
         if "last_message_timestamp" in kwargs.keys():
-            self.last_message_timestamp = int(kwargs["last_message_timestamp"])
+            self.last_message_timestamp = kwargs["last_message_timestamp"]
+            # TODO check type
         if "inactive" in kwargs.keys():
-            self.inactive = int(kwargs["inactive"])
+            self.inactive = bool(kwargs["inactive"])
         if "id_clan_membership" in kwargs.keys():
             self.id_clan_membership = int(kwargs["id_clan_membership"])
         if "id_hierarchy_lvl" in kwargs.keys():
