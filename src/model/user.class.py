@@ -1,4 +1,7 @@
 # 
+# TODO check if this class is right
+
+
 class User ():
     # private:
     """
